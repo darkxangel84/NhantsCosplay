@@ -1,0 +1,34 @@
+<footer>
+    Copyright &copy 2016 Nhantscosplay.<br>Disclaimer - All images belong to their rightful owners.<br>
+    Website designed and built by <b>Aimee Tacchi Web Design</b>
+</footer>
+        </div><!-- end of right-content -->
+    </div> <!-- end of outer-container -->
+</div> <!--end of page wrapper -->
+	<script>
+	function showNav() {
+		var hideNav = document.getElementById("hide_nav");
+
+		if ( hideNav.style.display != "block") {
+	    	hideNav.style.display = "block";
+		}
+		else {
+			hideNav.style.display = "none";
+		}
+	}
+	</script>
+
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<!-- Fancy box image gallery -->
+	<link rel="stylesheet" href="dist/css/jquery.fancybox.css"/>
+	<!-- Fancy box -->
+	<script src="dist/js/jquery.fancybox.pack.js"></script> 
+	<!-- Add fancyBox -->
+	<script>
+		$(document).ready(function() {
+			$(".fancybox").fancybox();
+		});
+	</script>
+</body>
+</html>

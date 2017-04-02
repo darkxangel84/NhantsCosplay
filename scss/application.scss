@@ -1,0 +1,261 @@
+/* -----------------------------------------------------------------------------
+ * Variables
+ * -------------------------------------------------------------------------- */
+ // COLOURS
+$black-text: black;
+$white-text: white;
+
+// WIDTHS
+$fullwidth: 100%;
+
+
+/* -----------------------------------------------------------------------------
+ * Base Styles
+ * -------------------------------------------------------------------------- */
+
+body {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: $black-text;
+	font-weight:700;
+	font-size:2em; /* 32px */
+	line-height:1;
+}
+
+h2 {
+	color: #1845c2;
+	font-size:1.625em; /* 26px */
+	font-weight:400;
+	line-height:1.1;
+	margin:0;
+}
+
+h3 {
+	color: #1845c2;
+	font-size:1.500em; /* 24px */
+	font-weight:400;
+	line-height:1.1;
+	margin:0;
+}
+
+header {
+	border-top: 10px solid #1a936f;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.7em 0 0.2em 0.5em;
+}
+
+/* === BURGER MENU ==== */
+		
+	#burger-menu {
+		flex-basis: 10%;
+	}
+	
+	#burger-layer-one, #burger-layer-two, #burger-layer-three {
+		width: 25px;
+		height: 5px;
+		background: #1a936f;
+		margin: 0 0 4px 0;
+		transition: all 0.8s;
+	}
+	
+	#burger-layer-three {
+		margin: 0;
+	}
+	
+/* --- END Burger Menu --- */
+
+#hide_nav {
+    display: none;
+    font-weight: 700;
+    font-size: 1em;
+	width: $fullwidth;
+}
+
+.navactive {
+    padding: 0.5em 0 0.5em 1em;
+    color: #fff;
+	}
+
+	.navunactive a {
+        display: block;
+        padding: 0.5em 0 0.5em 1em;
+        color: #1a5663;
+        text-decoration: none;
+	}
+
+	.navunactive a:hover {
+        background-color: #1a936f;
+        color: #fff;
+	}
+
+.left-content {
+    background: #c6dabf; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #c6dabf $fullwidth); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#c6dabf $fullwidth); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#c6dabf $fullwidth); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c6dabf',GradientType=0 ); /* IE6-9 */
+    flex-basis: 25%;
+    }
+
+.right-content {
+    flex-basis: 75%;
+}
+
+.desktoplogo {
+    display: none;
+}
+
+.logo {
+	flex-basis: 70%;
+	
+	img {
+		width: $fullwidth;
+	}
+}
+
+
+.hero  {
+    background: url(../images/hero1.jpg) no-repeat center;
+    background-size: cover;
+    height: 40em;
+}
+
+
+/* ----- Wrappers ------ */
+.content-container {
+	margin: 0 auto;
+    text-align: center;
+	width: 90%;
+}
+
+/*.findoutmorebutton a {
+    background-color: none;
+    box-sizing: border-box;
+    border: 5px solid #1a936f;
+    color: #114b5f;
+    display: block;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0.2em 0.5em;
+	text-decoration: none;
+    width: 40%;
+}
+
+.findoutmorebutton a:hover {
+    background-color: #1a936f;
+    color: #fff;
+}
+
+
+/* === CONTACT FORM ==== */
+
+.contactform {
+	font-family: 'Titillium Web', sans-serif;
+  	width: 90%;
+	
+	label {
+		margin-bottom: 10px;
+		display: block;
+	}
+}
+
+input[type="text"], [type="email"] {
+  		border: 1px solid #AFAFAF;
+  		display: block;
+  		height: 35px;
+  		padding: 1%;
+  		outline: none;
+  		width: 99%;
+}
+
+input[type="submit"] {
+  		border: 0;
+}
+
+#comments {
+  		border: 1px solid #AFAFAF;
+  		display: block;
+		height: 150px;
+		padding: 1%;
+		margin-bottom: 3%;
+		outline: none;
+		width: 99%;
+}
+
+/* ----- FOOTER STYLES ----- */
+
+footer {
+	color: #114b5f;
+    box-sizing: border-box;
+	font-size: 12px;
+    text-align: center;
+    padding: 5em;
+}
+
+/* DESKTOP CODE */
+@media screen and (min-width: 768px) {
+    
+    .page_wrapper {
+        position: relative;
+    }
+    
+    header {
+	padding: 0;
+    position: fixed;
+    width: $fullwidth;
+    z-index: 1;
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+    .desktoplogo {
+	    display: block;
+	    box-sizing: border-box;
+	    padding: 1em 2em 1em 2em;
+	    width: $fullwidth;
+	    
+	    img {
+	        width: $fullwidth;
+	    }
+    }
+    
+    
+    .left-content {
+        position: relative;
+    }
+    
+    .navactive {
+    	padding: 0.2em 3em;
+	}
+
+	.navunactive a {
+        padding: 0.2em 3em;
+	}
+    
+    .outer-container {
+        display:flex;
+    }
+    
+	#burger-menu {
+	display: none;
+	}
+    
+    #hide_nav {
+    display: block;
+    font-size: 1.6em;
+    position: fixed;
+    width: 25%;
+    }
+    
+}
