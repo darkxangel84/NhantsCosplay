@@ -4,6 +4,7 @@
  // COLOURS
 $black-text: black;
 $white-text: white;
+$green: #1a9370;
 
 // WIDTHS
 $fullwidth: 100%;
@@ -12,6 +13,14 @@ $fullwidth: 100%;
 /* -----------------------------------------------------------------------------
  * Base Styles
  * -------------------------------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
 
 body {
 	font-family: 'Titillium Web', sans-serif;
@@ -43,9 +52,16 @@ h3 {
 	margin:0;
 }
 
+h4 {
+	color: #1845c2;
+	font-size:1.300em; /* 24px */
+	font-weight:400;
+	line-height:1.1;
+	margin:0;
+}
+
 header {
-	border-top: 10px solid #1a936f;
-	box-sizing: border-box;
+	border-top: 10px solid $green;
 	display: flex;
 	justify-content: space-between;
 	padding: 0.7em 0 0.2em 0.5em;
@@ -76,24 +92,38 @@ header {
     font-weight: 700;
     font-size: 1em;
 	width: $fullwidth;
+
+	.navitem {
+		display: block;
+		color: #1b5664;
+		text-decoration: none;
+		padding: .5rem 1.5rem;
+
+		&:hover {
+			background-color: $green;
+			color: $white-text;
+		}
+	}
 }
 
-.navactive {
-    padding: 0.5em 0 0.5em 1em;
-    color: #fff;
-	}
+.twitter {
+	display: none;
+	padding: 5rem 0 0 0;
+	margin: 0 auto;
+	width: 90%;
+	height: 100px;
+}
 
-	.navunactive a {
-        display: block;
-        padding: 0.5em 0 0.5em 1em;
-        color: #1a5663;
-        text-decoration: none;
+.social_icons {
+	text-align: right;
+	padding: .5rem;
+	
+	a .fa {
+		color: #1b5664;
+		font-size: 1.5rem;
+		padding: 0 .2rem;
 	}
-
-	.navunactive a:hover {
-        background-color: #1a936f;
-        color: #fff;
-	}
+}
 
 .left-content {
     background: #c6dabf; /* Old browsers */
@@ -120,11 +150,56 @@ header {
 	}
 }
 
-
 .hero  {
     background: url(/images/hero1.jpg) no-repeat center;
     background-size: cover;
     height: 40em;
+}
+
+.hero-events {
+	background: url(/images/events-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em;
+}
+
+.hero-contact {
+	background: url(/images/contact-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em;
+}
+
+.image-container {
+
+	img {
+		width: 70%;
+	}
+}
+
+.groups {
+	background-color: #c6dabf;
+	padding: 1.5rem 2rem;
+	text-align:left;
+	margin-bottom: 1rem;
+
+}
+
+.group-list {
+	list-style-type: none;
+	padding: 0;
+
+	a {
+		color: $black-text;
+
+		&:hover { 
+			color: $green;
+			font-weight:bold;
+		}
+	}
+}
+
+.contact-details {
+	@extend .group-list;
+
 }
 
 
@@ -135,29 +210,8 @@ header {
 	width: 90%;
 }
 
-/*.findoutmorebutton a {
-    background-color: none;
-    box-sizing: border-box;
-    border: 5px solid #1a936f;
-    color: #114b5f;
-    display: block;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 2em;
-    font-weight: 700;
-    margin: 0 auto;
-    padding: 0.2em 0.5em;
-	text-decoration: none;
-    width: 40%;
-}
-
-.findoutmorebutton a:hover {
-    background-color: #1a936f;
-    color: #fff;
-}
-
-
 /* === CONTACT FORM ==== */
-
+/*
 .contactform {
 	font-family: 'Titillium Web', sans-serif;
   	width: 90%;
@@ -179,7 +233,7 @@ input[type="text"], [type="email"] {
 
 input[type="submit"] {
   		border: 0;
-}
+}*/
 
 #comments {
   		border: 1px solid #AFAFAF;
@@ -195,7 +249,6 @@ input[type="submit"] {
 
 footer {
 	color: #114b5f;
-    box-sizing: border-box;
 	font-size: 12px;
     text-align: center;
     padding: 5em;
@@ -221,7 +274,6 @@ footer {
     
     .desktoplogo {
 	    display: block;
-	    box-sizing: border-box;
 	    padding: 1em 2em 1em 2em;
 	    width: $fullwidth;
 	    
@@ -229,18 +281,9 @@ footer {
 	        width: $fullwidth;
 	    }
     }
-    
-    
-    .left-content {
-        position: relative;
-    }
-    
-    .navactive {
-    	padding: 0.2em 3em;
-	}
 
-	.navunactive a {
-        padding: 0.2em 3em;
+    .twitter {
+	display: block;
 	}
     
     .outer-container {
@@ -253,9 +296,32 @@ footer {
     
     #hide_nav {
     display: block;
-    font-size: 1.6em;
-    position: fixed;
-    width: 25%;
+    font-size: 1.2em;
+
+	    .navitem {
+			text-align: left;
+			padding: .5rem 3rem;
+		}
     }
+
+    .social_icons {
+	text-align: center;
+	padding: 1.5rem 0 0 0;
+	
+		a .fa {
+			font-size: 1.8rem;
+			padding: 0 .5rem;
+		}
+	}
+
+	.image-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	
+		img {
+			width: 30%;
+		}
+	}
     
 }
