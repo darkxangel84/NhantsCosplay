@@ -28,10 +28,8 @@
          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
        </div>
 
-    <div id="burger-menu" onclick="showNav()">
-        <div id="burger-layer-one"></div>
-        <div id="burger-layer-two"></div>
-        <div id="burger-layer-three"></div>
+    <div class="burger-menu">
+        <div class="menubar"></div>
     </div>
 </header>
     
@@ -40,12 +38,6 @@
         <div class="left-content">
 
             <a class="desktoplogo" href="index.html"><img src="images/logo.png" alt="logo"></a>
-            <nav id="hide_nav">
-                <a class="navitem" href="gallery.html">Gallery</a>
-                <a class="navitem" href="faq.html">FAQ</a>
-                <a class="navitem" href="events.html">Other Events/Groups</a>
-                <a class="navitem" href="contact.html">Contact</a>
-            </nav>
             
             <div class="social_icons">
                 <a href="https://www.facebook.com/groups/NorthamptonCosplayersUK" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -53,6 +45,13 @@
                 <a href="https://twitter.com/nhantscosplayuk" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <a href="http://www.facebook.com/Nhantscosplaymeets" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
+
+            <nav class="nav-items">
+                <a class="navitem" href="gallery.html">Gallery</a>
+                <a class="navitem" href="faq.html">FAQ</a>
+                <a class="navitem" href="events.html">Other Events/Groups</a>
+                <a class="navitem" href="contact.html">Contact</a>
+            </nav>
 
             <div class="twitter">
                 <a class="twitter-timeline" data-height="300" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/NhantsCosplayUK">Tweets by NhantsCosplayUK</a>
@@ -90,26 +89,22 @@
         </div>
 <footer>
     Copyright &copy 2016 Nhantscosplay.<br>Disclaimer - All images belong to their rightful owners.<br>
-    Website designed and built by <b>Aimee Tacchi Web Design</b>
+    Website designed and built by <b><a href="http://www.aimee-tacchi.co.uk" target="_blank">Aimee Tacchi Web Design</a></b>
 </footer>
         </div><!-- end of right-content -->
     </div> <!-- end of outer-container -->
 </div> <!--end of page wrapper -->
+	
+	<!-- jQuery library -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script>
-	function showNav() {
-		var hideNav = document.getElementById("hide_nav");
+		$(".burger-menu").click(function(){
+				$(this).toggleClass('active');
+			 	$(".nav-items").toggle();
 
-		if ( hideNav.style.display != "block") {
-	    	hideNav.style.display = "block";
-		}
-		else {
-			hideNav.style.display = "none";
-		}
-	}
+		});
 	</script>
 
-	<!-- Add jQuery library -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- Fancy box image gallery -->
 	<link rel="stylesheet" href="dist/css/jquery.fancybox.css"/>
 	<!-- Fancy box -->

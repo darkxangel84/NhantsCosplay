@@ -28,10 +28,8 @@
          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
        </div>
 
-    <div id="burger-menu" onclick="showNav()">
-        <div id="burger-layer-one"></div>
-        <div id="burger-layer-two"></div>
-        <div id="burger-layer-three"></div>
+    <div class="burger-menu">
+        <div class="menubar"></div>
     </div>
 </header>
     
@@ -40,12 +38,6 @@
         <div class="left-content">
 
             <a class="desktoplogo" href="index.html"><img src="images/logo.png" alt="logo"></a>
-            <nav id="hide_nav">
-                <a class="navitem" href="gallery.html">Gallery</a>
-                <a class="navitem" href="faq.html">FAQ</a>
-                <a class="navitem" href="events.html">Other Events/Groups</a>
-                <a class="navitem" href="contact.html">Contact</a>
-            </nav>
             
             <div class="social_icons">
                 <a href="https://www.facebook.com/groups/NorthamptonCosplayersUK" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -54,6 +46,13 @@
                 <a href="http://www.facebook.com/Nhantscosplaymeets" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             </div>
 
+            <nav class="nav-items">
+                <a class="navitem" href="gallery.html">Gallery</a>
+                <a class="navitem" href="faq.html">FAQ</a>
+                <a class="navitem" href="events.html">Other Events/Groups</a>
+                <a class="navitem" href="contact.html">Contact</a>
+            </nav>
+
             <div class="twitter">
                 <a class="twitter-timeline" data-height="300" data-theme="dark" data-link-color="#2B7BB9" href="https://twitter.com/NhantsCosplayUK">Tweets by NhantsCosplayUK</a>
             </div>
@@ -61,22 +60,28 @@
         </div>
           
    <div class="right-content">
-            <div class="hero"></div>
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to N'hants Cosplay Meets</h1>
+                    <h2>Meeting six or more times a year in the town of Northampton, England.</h2>
+                </div>
+            </div>
             <div class="content-container">
                 <main>
-                    <h1>Welcome to N'hants Cosplay Meets</h1>
+                    <div class="left-main">
+                        <p>N'hants Cosplay Meets is a Fan-based non-profiting meeting group for those who enjoy the culture popularised by Otaku, Geek, Gaming Community (Fans of Anime, Manga, Comic, Fantasy, Fiction, Sci-fi, Horror, J-Pop, Japanese Culture, Consoles, Animation, Cartoons, Roleplay, Videogames, and Costumes) to socialise with like minded people.</p>
+                        
+                        <p>Giving attendees the chance to talk about their favourite Characters, Shows, Series, Costume, Prop Projects, Games, Future and Past Expo and Convention Events, Take Photos, Play Games, Listen to Music, Hangout and have fun.</p>
 
-                     <p>Meeting six or more times a year in the town of Northampton, England.</p>
+                        <p>Since its first meeting October 2011 the group is friendly. Many Members act towards others as if they are family. Various ages 13+ attend meetings often. Please always act appropriately in a sensible way when with members. If a person breaches a meeting <a href="faq.html">rule</a> or if a drama situation occurs. Persons involved will be asked to leave.</p>
 
-                    <p>N'hants Cosplay Meets is a Fan-based non-profiting meeting group for those who enjoy the culture popularised by Otaku, Geek, Gaming Community (Fans of Anime, Manga, Comic, Fantasy, Fiction, Sci-fi, Horror, J-Pop, Japanese Culture, Consoles, Animation, Cartoons, Roleplay, Videogames, and Costumes) to socialise with like minded people.</p>
-                    
-                    <p>Giving attendees the chance to talk about their favourite Characters, Shows, Series, Costume, Prop Projects, Games, Future and Past Expo and Convention Events, Take Photos, Play Games, Listen to Music, Hangout and have fun.</p>
+                        <p>We are happy to Promote other groups and events in the area. Ours members have been present at many including Northampton Comic Con, Northampton Town Festival, Kettering Comic Con and the Umbrella Fair.</p>
 
-                    <p>Since its first meeting October 2011 the group is friendly. Many Members act towards others as if they are family. Various ages 13+ attend meetings often. Please always act appropriately in a sensible way when with members. If a person breaches a meeting <a href="faq.html">rule</a> or if a drama situation occurs. Persons involved will be asked to leave.</p>
-
-                    <p>We are happy to Promote other groups and events in the area. Ours members have been present at many including Northampton Comic Con, Northampton Town Festival, Kettering Comic Con and the Umbrella Fair.</p>
-
-                    <p>If you live in Northamptonshire, Surrounding area or even further. Come join us. Follow our  <a href="http://www.facebook.com/Nhantscosplaymeets">Facebook page</a> and <a href="https://www.facebook.com/groups/NorthamptonCosplayersUK">Group</a> to keep updated about future meets or if you are involved in planning an event or group tell us about it</p>
+                        <p>If you live in Northamptonshire, Surrounding area or even further. Come join us. Follow our  <a href="http://www.facebook.com/Nhantscosplaymeets">Facebook page</a> and <a href="https://www.facebook.com/groups/NorthamptonCosplayersUK">Group</a> to keep updated about future meets or if you are involved in planning an event or group tell us about it</p>
+                    </div>
+                    <div class="right-main">
+                            <img src="" alt="">
+                    </div>
                 </main>
 
                 <div class="image-container">
@@ -87,26 +92,22 @@
             </div>
   <footer>
     Copyright &copy 2016 Nhantscosplay.<br>Disclaimer - All images belong to their rightful owners.<br>
-    Website designed and built by <b>Aimee Tacchi Web Design</b>
+    Website designed and built by <b><a href="http://www.aimee-tacchi.co.uk" target="_blank">Aimee Tacchi Web Design</a></b>
 </footer>
         </div><!-- end of right-content -->
     </div> <!-- end of outer-container -->
 </div> <!--end of page wrapper -->
+	
+	<!-- jQuery library -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script>
-	function showNav() {
-		var hideNav = document.getElementById("hide_nav");
+		$(".burger-menu").click(function(){
+				$(this).toggleClass('active');
+			 	$(".nav-items").toggle();
 
-		if ( hideNav.style.display != "block") {
-	    	hideNav.style.display = "block";
-		}
-		else {
-			hideNav.style.display = "none";
-		}
-	}
+		});
 	</script>
 
-	<!-- Add jQuery library -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<!-- Fancy box image gallery -->
 	<link rel="stylesheet" href="dist/css/jquery.fancybox.css"/>
 	<!-- Fancy box -->
