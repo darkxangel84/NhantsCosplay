@@ -115,7 +115,7 @@ header {
 
 .social_icons {
   text-align: right;
-  margin-top: 2em;
+  margin-top: 10vw;
   padding: .3em .8rem; }
   .social_icons a .fa {
     color: black;
@@ -288,10 +288,11 @@ footer {
     .nav-items .navitem {
       text-align: left;
       font-size: 1.2em;
-      padding: 1rem 3rem 0; }
+      padding: 1rem 3rem; }
   .social_icons {
     display: block;
     text-align: center;
+    margin-top: 1vw;
     padding: 0 0 .5em; }
     .social_icons a .fa {
       font-size: 1.8rem;
@@ -314,15 +315,20 @@ footer {
       border-radius: 25px;
       width: 80%; }
   main {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
     main .left-main {
-      width: 70%; }
+      width: 60%; }
       main .left-main a {
         color: #90a872;
         font-weight: 700; }
     main .right-main {
       display: block;
-      width: 30%; } }
+      width: 35%; }
+      main .right-main img {
+        width: 100%;
+        border-radius: 25px;
+        padding: .5em; } }
 
 /*XL-DESKTOPS 1200px*/
 @media screen and (min-width: 1200px) {
