@@ -284,10 +284,10 @@ footer {
   .outer-container {
     display: flex; }
   .nav-items {
-    display: block;
-    font-size: 1.2em; }
+    display: block; }
     .nav-items .navitem {
       text-align: left;
+      font-size: 1.2em;
       padding: 1rem 3rem 0; }
   .social_icons {
     display: block;
