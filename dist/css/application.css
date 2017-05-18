@@ -56,14 +56,14 @@ header {
   position: relative;
   cursor: pointer;
   width: 40px;
-  height: 40px; }
+  height: 60px; }
   .burger-menu .menubar {
     position: absolute;
     background-color: #90a872;
     border-radius: 50px;
     transform: translate(-50%, -50%);
-    top: 50%;
-    left: 10%;
+    top: 1.7em;
+    left: 1.5em;
     width: 25px;
     height: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -98,6 +98,7 @@ header {
   .nav-items .navitem {
     display: block;
     color: #92A65F;
+    font-size: 1.4em;
     font-weight: 700;
     text-decoration: none;
     padding: .5rem 1.5rem; }
@@ -113,8 +114,9 @@ header {
   height: 100px; }
 
 .social_icons {
+  text-align: right;
   margin-top: 2em;
-  padding: 1em .8rem; }
+  padding: .3em .8rem; }
   .social_icons a .fa {
     color: black;
     font-size: 1.5rem;
@@ -143,7 +145,7 @@ header {
   display: none; }
 
 .logo {
-  flex-basis: 50%;
+  flex-basis: 60%;
   padding: 0; }
   .logo img {
     width: 100%; }
@@ -286,7 +288,7 @@ footer {
     font-size: 1.2em; }
     .nav-items .navitem {
       text-align: left;
-      padding: .5rem 3rem; }
+      padding: 1rem 3rem 0; }
   .social_icons {
     display: block;
     text-align: center;
