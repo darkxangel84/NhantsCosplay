@@ -186,9 +186,6 @@ header {
     flex-basis: 75%;
 }
 
-.desktoplogo {
-    display: none;
-}
 
 .logo {
 	flex-basis: 60%;
@@ -287,32 +284,7 @@ main {
 	}
 }
 
-/* === CONTACT FORM ==== */
-/*
-.contactform {
-	font-family: 'Titillium Web', sans-serif;
-  	width: 90%;
-	
-	label {
-		margin-bottom: 10px;
-		display: block;
-	}
-}
-
-input[type="text"], [type="email"] {
-  		border: 1px solid #AFAFAF;
-  		display: block;
-  		height: 35px;
-  		padding: 1%;
-  		outline: none;
-  		width: 99%;
-}
-
-input[type="submit"] {
-  		border: 0;
-}*/
-
-#comments {
+/*#comments {
   		border: 1px solid #AFAFAF;
   		display: block;
 		height: 150px;
@@ -320,7 +292,7 @@ input[type="submit"] {
 		margin-bottom: 3%;
 		outline: none;
 		width: 99%;
-}
+}*/
 
 /* ----- FOOTER STYLES ----- */
 
@@ -337,6 +309,7 @@ footer {
 	body {
 		font-size: 18px;
 	}
+
 
 	/* ----- FOOTER STYLES ----- */
 
@@ -362,30 +335,24 @@ footer {
     
     header {
 	padding: 0;
-    position: fixed;
     width: $fullwidth;
+    height: 3em;
     z-index: 1;
-	background-image: url(/images/topborder.jpg);
+	 background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/images/topborder.jpg);
 	background-size: cover;
+
+	.logo {
+		margin: .2em .5em;
+
+			img {
+			width: 50%;
+			}
+		}
     }
 
     .burger-menu {
 			display: none;
 		}
-    
-    .logo {
-        display: none;
-    }
-    
-    .desktoplogo {
-	    display: block;
-	    padding: 1em 2em 1em 2em;
-	    width: $fullwidth;
-	    
-	    img {
-	        width: $fullwidth;
-	    }
-    }
 
     .twitter {
 	display: block;
@@ -412,7 +379,7 @@ footer {
 	padding: 0 0 .5em;
 	
 		a .fa {
-			font-size: 1.8rem;
+			font-size: 2rem;
 			padding: 0 .5rem;
 		}
 	}
@@ -475,5 +442,21 @@ footer {
 	body {
 	font-size: 22px;
 	}
+
+	.social_icons {
+	
+		a .fa {
+			font-size: 2.5rem;
+		}
+	}
+
+	header {
+    height: 5em;
+
+	.logo {
+		margin: .5em .5em;
+
+		}
+    }
 
 }
