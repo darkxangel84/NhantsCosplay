@@ -6,6 +6,7 @@ $black-text: black;
 $white-text: white;
 $green: #90a872;
 $darkgreen: #92A65F;
+$bluegreen: #205764;
 
 // WIDTHS
 $fullwidth: 100%;
@@ -65,7 +66,7 @@ h4 {
 }
 
 header {
-	height: 10px;
+	height: 8px;
 	display: flex;
 	justify-content: space-between;
 	padding: 0.7em 0 0.2em 0.5em;
@@ -136,7 +137,7 @@ header {
 
 	.navitem {
 		display: block;
-		color: $darkgreen;
+		color: $bluegreen;
 		font-size: 1.4em;
 		font-weight: 700;
 		text-decoration: none;
@@ -164,21 +165,21 @@ header {
 	
 	a .fa {
 		color: $black-text;
-		font-size: 1.5rem;
-		padding: 0 .2rem;
+		font-size: 2rem;
+		padding: 0 .3rem;
 		transition: all .5s ease-out;
 		&:hover {
-		color: #87BD63;
+		color: $bluegreen;
 		}
 	}
 }
 
 .left-content {
     background: #c6dabf; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ffffff 0%, #c6dabf $fullwidth); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #ffffff 0%,#c6dabf $fullwidth); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #ffffff 0%,#c6dabf $fullwidth); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c6dabf',GradientType=0 ); /* IE6-9 */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #85bd42 $fullwidth); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#85bd42 $fullwidth); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#85bd42 $fullwidth); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#85bd42',GradientType=0 ); /* IE6-9 */
     flex-basis: 25%;
     }
 
@@ -194,6 +195,10 @@ header {
 	img {
 		width: $fullwidth;
 	}
+}
+
+.desktoplogo {
+	display: none;
 }
 
 .hero  {
@@ -216,18 +221,6 @@ header {
 	    	text-shadow: 0 2px 5px rgba(0,0,0,.2);
 	    }
 	}
-}
-
-.hero-events {
-	background: url(/images/events-hero.jpg) no-repeat center;
-    background-size: cover;
-    height: 20em;
-}
-
-.hero-contact {
-	background: url(/images/contact-hero.jpg) no-repeat center;
-    background-size: cover;
-    height: 20em;
 }
 
 .image-container {
@@ -340,18 +333,24 @@ footer {
     header {
 	padding: 0;
     width: $fullwidth;
-    height: 3em;
+    position: fixed;
     z-index: 1;
-	 background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)), url(/images/topborder.jpg);
+	 background: url(/images/topborder.jpg);
 	background-size: cover;
 
-	.logo {
-		margin: .2em .5em;
-
-			img {
-			width: 50%;
+		.logo {
+			display: none;
 			}
-		}
+    }
+
+    .desktoplogo {
+    	display: block;
+    	margin-top: 1em;
+    	padding: .5em;
+
+    	img {
+    		width: $fullwidth;
+    	}
     }
 
     .burger-menu {
@@ -371,7 +370,7 @@ footer {
     
 	    .navitem {
 			text-align: left;
-			font-size: 1em;
+			font-size: .8em;
 			padding: 1rem 3rem;
 		}
     }
@@ -383,8 +382,8 @@ footer {
 	padding: 0 0 .5em;
 	
 		a .fa {
-			font-size: 2rem;
-			padding: 0 .5rem;
+			font-size: 2.4rem;
+			padding: 0 .2rem;
 		}
 	}
 
@@ -411,6 +410,18 @@ footer {
 			border-radius: 25px;
 			width: 80%;
 	}
+}
+
+.hero-events {
+	background: url(/images/events-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em;
+}
+
+.hero-contact {
+	background: url(/images/contact-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em;
 }
 
 	main {
@@ -453,14 +464,5 @@ footer {
 			font-size: 2.5rem;
 		}
 	}
-
-	header {
-    height: 5em;
-
-	.logo {
-		margin: .5em .5em;
-
-		}
-    }
 
 }

@@ -46,7 +46,7 @@ h4 {
   margin: 0; }
 
 header {
-  height: 10px;
+  height: 8px;
   display: flex;
   justify-content: space-between;
   padding: 0.7em 0 0.2em 0.5em; }
@@ -97,7 +97,7 @@ header {
   display: none; }
   .nav-items .navitem {
     display: block;
-    color: #92A65F;
+    color: #205764;
     font-size: 1.4em;
     font-weight: 700;
     text-decoration: none;
@@ -119,22 +119,22 @@ header {
   padding: .3em .8rem; }
   .social_icons a .fa {
     color: black;
-    font-size: 1.5rem;
-    padding: 0 .2rem;
+    font-size: 2rem;
+    padding: 0 .3rem;
     transition: all .5s ease-out; }
     .social_icons a .fa:hover {
-      color: #87BD63; }
+      color: #205764; }
 
 .left-content {
   background: #c6dabf;
   /* Old browsers */
-  background: -moz-linear-gradient(top, #ffffff 0%, #c6dabf 100%);
+  background: -moz-linear-gradient(top, #ffffff 0%, #85bd42 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #ffffff 0%, #c6dabf 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #85bd42 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #ffffff 0%, #c6dabf 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #85bd42 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c6dabf',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#85bd42',GradientType=0 );
   /* IE6-9 */
   flex-basis: 25%; }
 
@@ -146,6 +146,9 @@ header {
   padding: 0; }
   .logo img {
     width: 100%; }
+
+.desktoplogo {
+  display: none; }
 
 .hero {
   background: url(/images/hero1.jpg) no-repeat center;
@@ -161,16 +164,6 @@ header {
       color: black; }
     .hero .hero-content h2 {
       text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
-
-.hero-events {
-  background: url(/images/events-hero.jpg) no-repeat center;
-  background-size: cover;
-  height: 20em; }
-
-.hero-contact {
-  background: url(/images/contact-hero.jpg) no-repeat center;
-  background-size: cover;
-  height: 20em; }
 
 .image-container img {
   width: 70%; }
@@ -241,14 +234,18 @@ footer {
   header {
     padding: 0;
     width: 100%;
-    height: 3em;
+    position: fixed;
     z-index: 1;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(/images/topborder.jpg);
+    background: url(/images/topborder.jpg);
     background-size: cover; }
     header .logo {
-      margin: .2em .5em; }
-      header .logo img {
-        width: 50%; }
+      display: none; }
+  .desktoplogo {
+    display: block;
+    margin-top: 1em;
+    padding: .5em; }
+    .desktoplogo img {
+      width: 100%; }
   .burger-menu {
     display: none; }
   .twitter {
@@ -259,7 +256,7 @@ footer {
     display: block; }
     .nav-items .navitem {
       text-align: left;
-      font-size: 1em;
+      font-size: .8em;
       padding: 1rem 3rem; }
   .social_icons {
     display: block;
@@ -267,8 +264,8 @@ footer {
     margin-top: 1vw;
     padding: 0 0 .5em; }
     .social_icons a .fa {
-      font-size: 2rem;
-      padding: 0 .5rem; }
+      font-size: 2.4rem;
+      padding: 0 .2rem; }
   .image-container {
     display: flex;
     justify-content: space-around;
@@ -286,6 +283,14 @@ footer {
       left: 10%;
       border-radius: 25px;
       width: 80%; }
+  .hero-events {
+    background: url(/images/events-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em; }
+  .hero-contact {
+    background: url(/images/contact-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em; }
   main {
     display: flex;
     justify-content: space-between; }
@@ -307,8 +312,4 @@ footer {
   body {
     font-size: 22px; }
   .social_icons a .fa {
-    font-size: 2.5rem; }
-  header {
-    height: 5em; }
-    header .logo {
-      margin: .5em .5em; } }
+    font-size: 2.5rem; } }
