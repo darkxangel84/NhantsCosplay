@@ -190,6 +190,9 @@ header {
       color: #90a872;
       font-weight: bold; }
 
+.iframe {
+  width: 100%; }
+
 /* ----- Wrappers ------ */
 .content-container {
   margin: 0 auto;
