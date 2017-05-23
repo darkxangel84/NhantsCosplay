@@ -168,6 +168,7 @@ header {
 		font-size: 2rem;
 		padding: 0 .3rem;
 		transition: all .5s ease-out;
+		
 		&:hover {
 		color: $bluegreen;
 		}
@@ -272,13 +273,14 @@ header {
 main {
 	display: flex;
 
-	.left-main {
-		width: 100%;
-	}
+}
 
-	.right-main {
-		display: none;
-	}
+.left-main {
+	width: 100%;
+}
+
+.right-main {
+	display: none;
 }
 
 /*#comments {
@@ -358,7 +360,7 @@ footer {
 		}
 
     .twitter {
-	display: block;
+		display: block;
 	}
     
     .outer-container {
@@ -427,27 +429,28 @@ footer {
 	main {
 	display: flex;
 	justify-content: space-between;
+	}
 
 	.left-main {
 		width: 60%;
 
 		a {
-			color: $green;
+			color: $black-text;
 			font-weight: 700;
 		}
 	}
 
 	.right-main {
 		display: block;
+		align-self: center;
 		width: 35%;
 
-		img {
-			width: 100%;
-			border-radius: 25px;
-			padding: .5em;
+			img {
+				width: 100%;
+				border-radius: 25px;
+				padding: .5em;
+			}
 		}
-	}
-}
     
 }
 
