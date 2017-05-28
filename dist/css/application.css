@@ -45,6 +45,9 @@ h4 {
   line-height: 1.1;
   margin: 0; }
 
+.margin {
+  margin: 1em; }
+
 header {
   height: 8px;
   display: flex;
@@ -194,6 +197,19 @@ header {
 
 main {
   display: flex; }
+
+/* ===== FLEX CONTAINTER --- */
+.flexcontainer {
+  display: flex; }
+
+.gallery {
+  width: 60%;
+  padding: 0 2em; }
+  .gallery img {
+    width: 100%; }
+
+.gallerylinks {
+  width: 40%; }
 
 .left-main {
   width: 100%; }
