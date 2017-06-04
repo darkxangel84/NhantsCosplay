@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,700" rel="stylesheet">
     
 <link href='dist/css/application.css' rel='stylesheet'>
+
 <!-- Twitter Widget -->
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
@@ -59,15 +60,19 @@
          
     <div class="right-content">
     <div class="hero-contact"></div>
+
         <div class="content-container">
 	        <div class="flexcontainer"> 
 	        	<div class="gallery"> 
 		            <h1>Gallery</h1>
 
-		            <img src="images/gallery001.jpg" alt="cosplaying meets">
-		            <img src="images/gallery002.jpg" alt="cosplaying meets">
-		            <img src="images/gallery003.jpg" alt="cosplaying meets">
-		            <img src="images/gallery004.jpg" alt="cosplaying meets">
+		            <a class="fancybox" rel="group" href="images/gallery001.jpg" title="cosplaying1"><img src="images/gallery001.jpg" width="100" alt="people in cosplaying"></a>
+
+		            <a class="fancybox" rel="group" href="images/gallery002.jpg" title="cosplaying2"><img src="images/gallery002.jpg" width="100" alt="people in cosplaying"></a>
+
+		            <a class="fancybox" rel="group" href="images/gallery003.jpg" title="cosplaying3"><img src="images/gallery003.jpg" width="100" alt="people in cosplaying"></a>
+
+		            <a class="fancybox" rel="group" href="images/gallery004.jpg" title="cosplaying4"><img src="images/gallery004.jpg" width="100" alt="people in cosplaying"></a>
 				</div>
 				<div class="gallerylinks">
 		            <h2 class="margin">For more images you can visit these Members Cosplay Pages</h2>
@@ -112,16 +117,15 @@
 
 		});
 	</script>
-
-	<!-- Fancy box image gallery -->
-	<!-- <link rel="stylesheet" href="dist/css/jquery.fancybox.css"/> -->
-	<!-- Fancy box -->
-	<!-- <script src="js/jquery.fancybox.pack.js"></script>  -->
 	<!-- Add fancyBox -->
-	<!-- <script>
+	<link rel="stylesheet" href="dist/css/jquery.fancybox.css" media="screen" />
+
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+	<!-- Add fancyBox -->
+	<script>
 		$(document).ready(function() {
 			$(".fancybox").fancybox();
 		});
-	</script> -->
+	</script>
 </body>
 </html>

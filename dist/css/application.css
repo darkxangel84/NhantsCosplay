@@ -198,18 +198,18 @@ header {
 main {
   display: flex; }
 
-/* ===== FLEX CONTAINTER --- */
+/* ===== FLEX CONTAINTER For Mobile is just set to block --- */
 .flexcontainer {
-  display: flex; }
+  display: block; }
 
 .gallery {
-  width: 60%;
-  padding: 0 2em; }
+  width: 100%;
+  padding: 0 2em; }
   .gallery img {
     width: 100%; }
 
 .gallerylinks {
-  width: 40%; }
+  width: 100%; }
 
 .left-main {
   width: 100%; }
@@ -312,6 +312,8 @@ footer {
   main {
     display: flex;
     justify-content: space-between; }
+  .flexcontainer {
+    display: flex; }
   .left-main {
     width: 60%; }
     .left-main a {
@@ -324,7 +326,11 @@ footer {
     .right-main img {
       width: 100%;
       border-radius: 25px;
-      padding: .5em; } }
+      padding: .5em; }
+  .gallery {
+    width: 60%; }
+  .gallerylinks {
+    width: 40%; } }
 
 /*XL-DESKTOPS 1200px*/
 @media screen and (min-width: 1200px) {

@@ -278,22 +278,23 @@ main {
 	display: flex;
 }
 
-/* ===== FLEX CONTAINTER --- */
+/* ===== FLEX CONTAINTER For Mobile is just set to block --- */
 
 .flexcontainer {
-	display: flex;
+	display: block;
 }
 
 .gallery {
-	width: 60%;
-	padding: 0 2em;
+	width: 100%;
+	padding: 0
+	 2em;
 	img {
 	width: 100%;
 	}
 }
 
 .gallerylinks {
-	width: 40%;
+	width: 100%;
 }
 
 .left-main {
@@ -452,6 +453,10 @@ footer {
 	justify-content: space-between;
 	}
 
+	.flexcontainer {
+	display: flex;
+	}
+
 	.left-main {
 		width: 60%;
 
@@ -472,6 +477,14 @@ footer {
 				padding: .5em;
 			}
 		}
+
+	.gallery {
+		width: 60%;
+	}
+
+	.gallerylinks {
+		width: 40%;
+	}
     
 }
 
