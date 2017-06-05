@@ -98,6 +98,8 @@ header {
 /* --- END Burger Menu --- */
 .nav-items {
   display: none; }
+  .nav-items p {
+    display: none; }
   .nav-items .navitem {
     display: block;
     color: #205764;
@@ -272,6 +274,9 @@ footer {
     display: flex; }
   .nav-items {
     display: block; }
+    .nav-items p {
+      display: block;
+      padding: 1rem 3rem; }
     .nav-items .navitem {
       text-align: left;
       font-size: .8em;

@@ -139,6 +139,10 @@ header {
 .nav-items {
     display: none;
 
+    p {
+    	display: none;
+    }
+
 	.navitem {
 		display: block;
 		color: $bluegreen;
@@ -391,7 +395,12 @@ footer {
     
     .nav-items {
     display: block;
-    
+    	
+    	p {
+    	display: block;
+    	padding: 1rem 3rem;
+    	}
+
 	    .navitem {
 			text-align: left;
 			font-size: .8em;
