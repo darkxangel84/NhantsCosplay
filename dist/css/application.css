@@ -96,6 +96,11 @@ header {
     top: 0; }
 
 /* --- END Burger Menu --- */
+.contactus,
+.contactus a {
+  font-size: 16px;
+  display: none; }
+
 .nav-items {
   display: none; }
   .nav-items p {
@@ -111,9 +116,14 @@ header {
       background-color: #90a872;
       color: white; }
 
+.facebook {
+  display: none;
+  padding: .5rem;
+  text-align: center; }
+
 .twitter {
   display: none;
-  padding: 5rem 0 0 0;
+  padding: 1rem 0 0 0;
   margin: 0 auto;
   width: 90%;
   height: 100px; }
@@ -219,15 +229,15 @@ main {
 .right-main {
   display: none; }
 
-/*#comments {
-  		border: 1px solid #AFAFAF;
-  		display: block;
-		height: 150px;
-		padding: 1%;
-		margin-bottom: 3%;
-		outline: none;
-		width: 99%;
-}*/
+.faqlist {
+  list-style-type: circle;
+  text-align: left; }
+  .faqlist li {
+    padding: .5em 0; }
+
+.red {
+  color: red; }
+
 /* ----- FOOTER STYLES ----- */
 footer {
   color: black;
@@ -268,7 +278,10 @@ footer {
       width: 100%; }
   .burger-menu {
     display: none; }
-  .twitter {
+  .facebook,
+  .twitter,
+  .contactus,
+  .contactus a {
     display: block; }
   .outer-container {
     display: flex; }
@@ -276,7 +289,9 @@ footer {
     display: block; }
     .nav-items p {
       display: block;
-      padding: 1rem 3rem; }
+      padding: 1rem 3rem;
+      font-weight: 700;
+      font-size: .8em; }
     .nav-items .navitem {
       text-align: left;
       font-size: .8em;
@@ -314,6 +329,10 @@ footer {
     background: url(/images/contact-hero.jpg) no-repeat center;
     background-size: cover;
     height: 20em; }
+  .hero-faq {
+    background: url(/images/faq-hero.jpg) no-repeat center;
+    background-size: cover;
+    height: 20em; }
   main {
     display: flex;
     justify-content: space-between; }
@@ -326,7 +345,6 @@ footer {
       font-weight: 700; }
   .right-main {
     display: block;
-    align-self: center;
     width: 35%; }
     .right-main img {
       width: 100%;
