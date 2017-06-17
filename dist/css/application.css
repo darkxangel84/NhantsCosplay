@@ -339,7 +339,8 @@ footer {
   .flexcontainer {
     display: flex; }
   .left-main {
-    width: 60%; }
+    width: 60%;
+    text-align: left; }
     .left-main a {
       color: black;
       font-weight: 700; }
