@@ -464,22 +464,23 @@ footer {
 	}
 }
 
-.hero-events {
-	background: url(/images/events-hero.jpg) no-repeat center;
+.hero-events,
+.hero-gallery {
+	background: url(/images/events-hero.jpg) no-repeat;
     background-size: cover;
-    height: 20em;
-}
-
-.hero-contact {
-	background: url(/images/contact-hero.jpg) no-repeat center;
-    background-size: cover;
-    height: 20em;
+    height: 20vw;
 }
 
 .hero-faq {
-	background: url(/images/faq-hero.jpg) no-repeat center;
+	background: url(/images/faq-hero.jpg) no-repeat;
     background-size: cover;
-    height: 20em;
+    height: 20vw;
+}
+
+.hero-location {
+	background: url(/images/location-hero.jpg) no-repeat;
+    background-size: cover;
+    height: 20vw;
 }
 
 	main {
