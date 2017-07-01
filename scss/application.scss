@@ -4,9 +4,10 @@
  // COLOURS
 $black-text: black;
 $white-text: white;
-$green: #90a872;
-$darkgreen: #92A65F;
-$bluegreen: #205764;
+$lightlightgreen: #E7EED2;
+$lightgreen: #7ECBA1;
+$green: #368C72;
+$darkgreen: #466551;
 
 // WIDTHS
 $fullwidth: 100%;
@@ -26,9 +27,8 @@ $breakpoint-desktop-lg: 1200px;
 }
 
 a {
-	text-decoration: none;
 	font-weight: 700;
-	color: $green;
+	color: $darkgreen;
 }
 
 body {
@@ -151,7 +151,7 @@ header {
 
 	.navitem {
 		display: block;
-		color: $bluegreen;
+		color: $darkgreen;
 		font-size: 1.4em;
 		font-weight: 700;
 		text-decoration: none;
@@ -189,17 +189,12 @@ header {
 		transition: all .5s ease-out;
 		
 		&:hover {
-		color: $bluegreen;
+		color: $green;
 		}
 	}
 }
 
 .left-content {
-    background: #c6dabf; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ffffff 0%, #85bd42 $fullwidth); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  #ffffff 0%,#85bd42 $fullwidth); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  #ffffff 0%,#85bd42 $fullwidth); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#85bd42',GradientType=0 ); /* IE6-9 */
     flex-basis: 25%;
     }
 
@@ -303,8 +298,12 @@ main {
 	width: 100%;
 	padding: 0
 	 2em;
-	img {
-	width: 100%;
+	 a {
+	 	display: block;
+		img {
+		width: 100%;
+		border: 3px solid #000000;
+		}
 	}
 }
 
@@ -342,13 +341,12 @@ footer {
     padding: 5em .5em 2em;
 }
 
- /*TABLET CODE 768px*/
-@media screen and (min-width: $breakpoint-desktop-lg) {
+ /* Tablet - 768px*/
+@media screen and (min-width: $breakpoint-tablet) {
 	
 	body {
 		font-size: 18px;
 	}
-
 
 	/* ----- FOOTER STYLES ----- */
 
@@ -393,6 +391,11 @@ footer {
     	img {
     		width: $fullwidth;
     	}
+    }
+
+    	.left-content {
+	background: $lightlightgreen;
+    flex-basis: 25%;
     }
 
     .burger-menu {
@@ -497,7 +500,7 @@ footer {
 		text-align: left;
 
 		a {
-			color: $black-text;
+			color: $darkgreen;
 			font-weight: 700;
 		}
 	}
