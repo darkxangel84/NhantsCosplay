@@ -205,7 +205,8 @@ header {
 
 .logo {
 	flex-basis: 60%;
-	padding: 0;
+	padding: .5em 1em;
+
 	
 	img {
 		width: $fullwidth;
@@ -386,7 +387,7 @@ footer {
     .desktoplogo {
     	display: block;
     	margin-top: 1em;
-    	padding: .5em;
+    	padding: .8em 2em;
 
     	img {
     		width: $fullwidth;
