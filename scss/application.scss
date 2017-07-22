@@ -199,6 +199,8 @@ header {
     }
 
 .right-content {
+	margin-top: .5em;
+	border-top: .5em solid $green;
     flex-basis: 75%;
 }
 
@@ -240,14 +242,57 @@ header {
 }
 
 .image-container {
+	width: 70%;
+	margin: 0 auto;
 
-	img {
-		width: 70%;
+	a img {
+		width: 100%;
+	}
+}
+
+.faq-dropdown {
+	display: block;
+	float: left;
+	font-size:1.4em;
+	background-color: $darkgreen;
+	width: 100%;
+
+	.faqtitle-container {
+	box-sizing: border-box;
+	color: $white-text;
+	border-bottom: 1px solid $darkgreen;
+	cursor: pointer;
+	padding: 1em;
+	width: 100%;
+
+		 &:hover {
+		 	background-color: $green;
+			color: #fff;
+		 }
+
+		 &:active {
+		 	background-color:  $green;
+			color: #fff;
+		 }
+
+		 .faqtitle {
+		 	display: flex;
+		 	justify-content: space-between;
+		}
+
+	}
+
+	.faqdesc {
+		background: $lightlightgreen;
+		box-sizing: border-box;
+		display:none;
+		padding: .5em 1.5em;
+		width: 100%;
 	}
 }
 
 .groups {
-	background-color: #c6dabf;
+	background-color: $lightlightgreen;
 	padding: 1.5rem 2rem;
 	text-align:left;
 	margin-bottom: 1rem;
@@ -259,7 +304,6 @@ header {
 	padding: 0;
 
 	a {
-		color: $black-text;
 
 		&:hover { 
 			color: $green;
@@ -281,7 +325,6 @@ header {
 /* ----- Wrappers ------ */
 .content-container {
 	margin: 0 auto;
-    text-align: center;
 	width: 90%;
 }
 
@@ -297,8 +340,7 @@ main {
 
 .gallery {
 	width: 100%;
-	padding: 0
-	 2em;
+	padding: 0 .5em;
 	 a {
 	 	display: block;
 		img {
@@ -309,6 +351,8 @@ main {
 }
 
 .gallerylinks {
+	margin-top: 1em;
+	line-height: 2;
 	width: 100%;
 }
 
@@ -323,6 +367,7 @@ main {
 .faqlist {
 	list-style-type: circle;
 	text-align: left;
+	margin: 0;
 
 	li {
 		padding: .5em 0;
@@ -333,13 +378,21 @@ main {
 	color: red;
 }
 
+
+.member-pages {
+	background-color: #c6dabf;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
 /* ----- FOOTER STYLES ----- */
 
 footer {
 	color: $black-text;
 	font-size: 12px;
     text-align: center;
-    padding: 5em .5em 2em;
+    padding: 5em 5em 2em;
 }
 
  /* Tablet - 768px*/
@@ -348,6 +401,15 @@ footer {
 	body {
 		font-size: 18px;
 	}
+
+	.image-container {
+	width: 60%;
+	margin: 0 auto;
+	
+	a img {
+		width: 100%;
+	}
+}
 
 	/* ----- FOOTER STYLES ----- */
 
@@ -376,7 +438,7 @@ footer {
     width: $fullwidth;
     position: fixed;
     z-index: 1;
-	 background: url(/images/topborder.jpg);
+	background: url(/images/topborder.jpg);
 	background-size: cover;
 
 		.logo {
@@ -398,6 +460,11 @@ footer {
 	background: $lightlightgreen;
     flex-basis: 25%;
     }
+
+    .right-content {
+    	margin-top: 0;
+		border-top: none;
+	}
 
     .burger-menu {
 			display: none;
@@ -443,13 +510,19 @@ footer {
 		}
 	}
 
+		.faq-dropdown {
+		font-size:1em;
+
+	}
+
 	.image-container {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		width: 70%;
 	
 		img {
-			width: 20%;
+			width: 50%;
 		}
 	}
 
@@ -468,24 +541,24 @@ footer {
 	}
 }
 
-.hero-events,
-.hero-gallery {
-	background: url(/images/events-hero.jpg) no-repeat;
-    background-size: cover;
-    height: 20vw;
-}
+	.hero-events,
+	.hero-gallery {
+		background: url(/images/events-hero.jpg) no-repeat;
+	    background-size: cover;
+	    height: 20vw;
+	}
 
-.hero-faq {
-	background: url(/images/faq-hero.jpg) no-repeat;
-    background-size: cover;
-    height: 20vw;
-}
+	.hero-faq {
+		background: url(/images/faq-hero.jpg) no-repeat;
+	    background-size: cover;
+	    height: 20vw;
+	}
 
-.hero-location {
-	background: url(/images/location-hero.jpg) no-repeat;
-    background-size: cover;
-    height: 20vw;
-}
+	.hero-location {
+		background: url(/images/location-hero.jpg) no-repeat;
+	    background-size: cover;
+	    height: 20vw;
+	}
 
 	main {
 	display: flex;
@@ -519,6 +592,9 @@ footer {
 
 	.gallery {
 		width: 60%;
+		a img {
+			width: 80%;
+		}
 	}
 
 	.gallerylinks {

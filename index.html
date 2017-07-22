@@ -91,9 +91,15 @@
                 </main>
 
                 <div class="image-container">
-                    <img src="http://nhantscosplay.org.uk/images/CosplayNOTConsent.jpg" alt="CosplayNOTConsent">
-                    <img src="http://nhantscosplay.org.uk/images/i-cosplay-2.jpg" alt="i-cosplay">
-                    <img src="http://nhantscosplay.org.uk/images/lovparks.jpg" alt="Love Parks">
+                    <a href="http://cosplayisnotconsent.org/" target="_blank">
+                    <img src="images/CosplayNOTConsent.jpg" alt="CosplayNOTConsent">
+                    </a>
+                    <a href="http://i-cosplay.org/" target="_blank">
+                    <img src="images/i-cosplay-2.jpg" alt="i-cosplay">
+                    </a>
+                    <a href="http://www.keepbritaintidy.org" target="_blank">
+                    <img src="images/lovparks.jpg" alt="Love Parks">
+                    </a>
                 </div>
             </div>
   <footer>
@@ -125,6 +131,20 @@
 		$(document).ready(function() {
 			$(".fancybox").fancybox();
 		});
+
+	// for FAQ dropdown
+
+	$(document).ready(function() {
+    $(".faq-dropdown .faqtitle-container").click(function() {
+      if($(this).next("div").is(":visible")){
+        $(this).next("div").slideUp();
+      } else {
+        $(".faq-dropdown .faqdesc").slideUp();
+        $(this).next("div").slideToggle();
+      }
+    });
+  });
+
 	</script>
 </body>
 </html>

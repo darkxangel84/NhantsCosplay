@@ -107,6 +107,20 @@
 		$(document).ready(function() {
 			$(".fancybox").fancybox();
 		});
+
+	// for FAQ dropdown
+
+	$(document).ready(function() {
+    $(".faq-dropdown .faqtitle-container").click(function() {
+      if($(this).next("div").is(":visible")){
+        $(this).next("div").slideUp();
+      } else {
+        $(".faq-dropdown .faqdesc").slideUp();
+        $(this).next("div").slideToggle();
+      }
+    });
+  });
+
 	</script>
 </body>
 </html>
